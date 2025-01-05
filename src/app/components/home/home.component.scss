@@ -1,0 +1,14 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../../../assets/home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: -76px; // Adjust this value based on your navbar height
+  }
