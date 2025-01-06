@@ -10,35 +10,108 @@
 
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center mb-5">Nos Services</h2>
+    <h2 class="text-center mb-5">Faites vos travaux avec nous</h2>
     <div class="row g-4">
+      <!-- Card Accompagnement de A à Z -->
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body text-center">
-            <i class="bi bi-sun fs-1 text-warning mb-3"></i>
-            <h3 class="card-title h4">Installation Solaire</h3>
-            <p class="card-text">Convertissez-vous à l'énergie solaire avec nos services d'installation professionnels.</p>
+            <i class="bi bi-bricks fs-1 text-warning mb-3"></i>
+            <h3 class="card-title h4">Accompagnement de A à Z</h3>
+            <p class="card-text">Nous vous accompagnons de A à Z pour une transformation digitale de votre entreprise.</p>
           </div>
         </div>
       </div>
+      <!-- Card Prix accessibles -->
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body text-center">
-            <i class="bi bi-house-fill fs-1 text-primary mb-3"></i>
-            <h3 class="card-title h4">Isolation</h3>
-            <p class="card-text">Améliorez l'efficacité thermique de votre maison avec des solutions d'isolation modernes.</p>
+            <i class="bi bi-currency-dollar fs-1 text-success mb-3"></i>
+            <h3 class="card-title h4">Prix accessibles</h3>
+            <p class="card-text">Nous proposons des prix accessibles et personnalisables pour des solutions de rénovation efficaces.</p>
           </div>
         </div>
       </div>
+      <!-- Card Travaux de qualité -->
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body text-center">
-            <i class="bi bi-cpu fs-1 text-success mb-3"></i>
-            <h3 class="card-title h4">Systèmes Intelligents</h3>
-            <p class="card-text">Implémentez des systèmes de gestion d'énergie intelligents pour une efficacité optimale.</p>
+            <i class="bi bi-gem fs-1 text-primary mb-3"></i>
+            <h3 class="card-title h4">Travaux de qualité</h3>
+            <p class="card-text">Nous offrons des travaux de haute qualité pour atteindre vos objectifs de rénovation.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card Aides déduites de votre devis -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-cash-coin fs-1 text-danger mb-3"></i>
+            <h3 class="card-title h4">Aides déduites de votre devis</h3>
+            <p class="card-text">Nous offrons des aides de votre devis pour vous aider dans vos projets de rénovation.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card Délais courts -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-stopwatch fs-1 text-info mb-3"></i>
+            <h3 class="card-title h4">Délais courts</h3>
+            <p class="card-text">Nous offrons des délais courts et efficaces pour atteindre vos objectifs de rénovation rapidement.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card Garantie de satisfaction -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-emoji-smile fs-1 text-success mb-3"></i>
+            <h3 class="card-title h4">Garantie de satisfaction</h3>
+            <p class="card-text">Nous offrons une garantie de satisfaction sur nos travaux de rénovation.</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!--Des clients électrisés par nos services de rénovation -->
+
+<section class="py-5">
+  <div class="container">
+      <!-- Cards OF GOOGLE COMMENTS SLIED TO SHOW -->
+      <div class="reviews-section">
+        <h2 class="text-center mb-4">Des clients électrisés par nos services</h2>
+        <div class="rating-summary text-center mb-4">
+          <div class="stars d-inline-block">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <span class="rating-score">4.6</span>
+          <span class="total-reviews">(3036 avis Google)</span>
+        </div>
+        
+        <div class="reviews-carousel">
+          <div class="reviews-container">
+            <div class="review-card" *ngFor="let review of reviews">
+              <div class="stars mb-2">
+                <i class="bi bi-star-fill" *ngFor="let star of getStarsArray(review.rating)"></i>
+              </div>
+              <h5>{{ review.name }}</h5>
+              <p class="review-date">{{ review.date }}</p>
+              <p class="review-text">{{ review.text }}</p>
+            </div>
+          </div>
+          
+          <div class="carousel-controls">
+            <button class="prev-btn" (click)="prevSlide()"><i class="bi bi-chevron-left"></i></button>
+            <button class="next-btn" (click)="nextSlide()"><i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
   </div>
 </section>

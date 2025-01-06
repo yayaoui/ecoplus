@@ -6,12 +6,12 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, 
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'projects', component: ProjectsComponent },
+  { path: '', redirectTo: 'accueil', pathMatch: 'full' }, 
+  { path: 'accueil', component: HomeComponent },
+  { path: 'a-propos', component: AboutComponent },
+  { path: 'projets', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: 'home' } // Wildcard route for undefined paths
+  { path: '**', redirectTo: 'accueil' } // Wildcard route for undefined paths
 ];
 
 @NgModule({

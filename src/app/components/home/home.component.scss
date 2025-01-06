@@ -12,3 +12,236 @@
     position: relative;
     margin-top: -76px; // Adjust this value based on your navbar height
   }
+
+  .reviews-section {
+  h2 {
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+  }
+
+  .rating-summary {
+    margin-bottom: 3rem;
+
+    .stars {
+      color: #FFD700;
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+
+    .rating-score {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .total-reviews {
+      color: var(--text-secondary);
+    }
+  }
+
+  .reviews-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding: 0 30px;
+    }
+
+    .reviews-container {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 1rem 0;
+      width: 100%;
+
+      .review-card {
+        flex: 0 0 calc((100% - 4rem) / 3); // Exactly 3 cards with 2rem gap between
+        min-width: calc((100% - 4rem) / 3);
+        
+        @media (max-width: 992px) {
+          flex: 0 0 calc((100% - 2rem) / 2); // 2 cards on tablet
+          min-width: calc((100% - 2rem) / 2);
+        }
+
+        @media (max-width: 576px) {
+          flex: 0 0 100%; // 1 card on mobile
+          min-width: 100%;
+        }
+      }
+    }
+
+    .review-card {
+      background: var(--surface-card);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.1),
+        0 6px 6px rgba(0, 0, 0, 0.1),
+        0 0 0 1px var(--border-color);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+
+      // Add subtle gradient border
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 15px;
+        padding: 2px;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.3)
+        );
+        -webkit-mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 
+          0 20px 25px rgba(0, 0, 0, 0.15),
+          0 10px 10px rgba(0, 0, 0, 0.12),
+          0 0 0 1px var(--border-color);
+      }
+
+      .stars {
+        color: #FFD700;
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 0.25rem;
+
+        i {
+          filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+        }
+      }
+
+      h5 {
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .review-date {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+      }
+
+      .review-text {
+        color: var(--text-primary);
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0.9;
+      }
+    }
+
+    .carousel-controls {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      padding: 0 1rem;
+
+      @media (max-width: 576px) {
+        padding: 0 0.5rem;
+      }
+
+      button {
+        pointer-events: auto;
+        width: 45px;
+        height: 45px;
+        border: none;
+        border-radius: 50%;
+        background: var(--surface-card);
+        box-shadow: 
+          0 4px 8px rgba(0, 0, 0, 0.15),
+          0 1px 3px rgba(0, 0, 0, 0.3),
+          0 0 0 1px var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 2;
+
+        &:hover {
+          background: var(--surface-hover);
+          transform: scale(1.1);
+          box-shadow: 
+            0 6px 12px rgba(0, 0, 0, 0.2),
+            0 2px 4px rgba(0, 0, 0, 0.3),
+            0 0 0 1px var(--border-color);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+          &:hover {
+            transform: none;
+          }
+        }
+
+        i {
+          font-size: 1.2rem;
+          color: var(--text-primary);
+        }
+
+        @media (max-width: 576px) {
+          width: 35px;
+          height: 35px;
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .prev-btn {
+        margin-left: -22.5px;
+      }
+
+      .next-btn {
+        margin-right: -22.5px;
+      }
+    }
+  }
+}
+
+:root {
+  // Light mode variables
+  --text-primary: #2c3e50;
+  --text-secondary: #6c757d;
+  --surface-card: #ffffff;
+  --surface-hover: #f8f9fa;
+  --border-color: rgba(0, 0, 0, 0.12);
+}
+
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --surface-card: #2c3e50;
+    --surface-hover: #34495e;
+    --border-color: rgba(255, 255, 255, 0.15);
+  }
+}
