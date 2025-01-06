@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   reviews = [
     {
       name: 'Christophe Simler',
@@ -47,32 +47,87 @@ export class HomeComponent implements OnInit {
 
   currentIndex = 0;
   itemsPerSlide = 3;
+  touchStartX = 0;
+  touchEndX = 0;
+  readonly SWIPE_THRESHOLD = 50;
 
   ngOnInit() {
-    // Initialize any necessary setup
+    this.adjustItemsPerSlide();
+    window.addEventListener('resize', this.adjustItemsPerSlide.bind(this));
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('resize', this.adjustItemsPerSlide.bind(this));
+  }
+
+  adjustItemsPerSlide() {
+    if (window.innerWidth <= 576) {
+      this.itemsPerSlide = 1;
+    } else if (window.innerWidth <= 992) {
+      this.itemsPerSlide = 2;
+    } else {
+      this.itemsPerSlide = 3;
+    }
+    this.currentIndex = Math.min(this.currentIndex, this.getMaxIndex());
+    this.updateSlidePosition();
+  }
+
+  getMaxIndex(): number {
+    return Math.max(0, Math.ceil(this.reviews.length / this.itemsPerSlide) - 1);
+  }
+
+  goToSlide(index: number) {
+    if (index >= 0 && index <= this.getMaxIndex()) {
+      this.currentIndex = index;
+      this.updateSlidePosition();
+    }
   }
 
   nextSlide() {
-    const maxIndex = this.reviews.length - this.itemsPerSlide;
-    if (this.currentIndex < maxIndex) {
+    if (this.currentIndex < this.getMaxIndex()) {
       this.currentIndex++;
-      this.updateSlidePosition();
+    } else {
+      this.currentIndex = 0;
     }
+    this.updateSlidePosition();
   }
 
   prevSlide() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
-      this.updateSlidePosition();
+    } else {
+      this.currentIndex = this.getMaxIndex();
+    }
+    this.updateSlidePosition();
+  }
+
+  onTouchStart(event: TouchEvent) {
+    this.touchStartX = event.touches[0].clientX;
+  }
+
+  onTouchMove(event: TouchEvent) {
+    event.preventDefault();
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    this.touchEndX = event.changedTouches[0].clientX;
+    const swipeDistance = this.touchEndX - this.touchStartX;
+    
+    if (Math.abs(swipeDistance) > this.SWIPE_THRESHOLD) {
+      if (swipeDistance > 0) {
+        this.prevSlide();
+      } else {
+        this.nextSlide();
+      }
     }
   }
 
   private updateSlidePosition() {
     const container = document.querySelector('.reviews-container') as HTMLElement;
     if (container) {
-      const cardWidth = container.offsetWidth / this.itemsPerSlide;
-      const newPosition = -this.currentIndex * cardWidth;
-      container.style.transform = `translateX(${newPosition}px)`;
+      const slideWidth = 100 / this.itemsPerSlide;
+      const translateX = -(this.currentIndex * slideWidth);
+      container.style.transform = `translateX(${translateX}%)`;
     }
   }
 
