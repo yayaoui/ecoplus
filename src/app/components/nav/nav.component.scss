@@ -39,6 +39,18 @@
   }
 }
 
+// Navigation Centering
+.navbar-nav-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+
 // Theme Toggle Button
 .btn-icon {
   padding: 0.5rem;
@@ -93,5 +105,10 @@
         width: 100%;
       }
     }
+  }
+
+  .navbar-nav-wrapper {
+    position: static;
+    transform: none;
   }
 }
