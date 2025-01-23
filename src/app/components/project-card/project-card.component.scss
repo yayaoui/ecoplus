@@ -3,11 +3,11 @@
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: var(--bs-box-shadow-lg) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
   }
 
   .carousel {
-    border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
     overflow: hidden;
 
     .carousel-item {
@@ -22,26 +22,28 @@
 
     .carousel-control-prev,
     .carousel-control-next {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2rem;
+      height: 2rem;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
       opacity: 0;
       transition: opacity 0.3s ease;
 
       &-icon {
-        width: 1.2rem;
-        height: 1.2rem;
-        padding: 1rem;
+        width: 1rem;
+        height: 1rem;
+        filter: brightness(0);
       }
     }
 
     .carousel-control-prev {
-      left: 1rem;
+      left: 0.5rem;
     }
 
     .carousel-control-next {
-      right: 1rem;
+      right: 0.5rem;
     }
   }
 
@@ -54,8 +56,9 @@
 
   .card-body {
     .badge {
-      padding: 0.5em 1em;
+      padding: 0.5em 0.8em;
       font-weight: 500;
+      text-transform: capitalize;
     }
 
     .project-details {
@@ -67,20 +70,36 @@
   }
 
   .progress {
-    border-radius: var(--bs-border-radius-pill);
+    background-color: #e9ecef;
+    border-radius: 1rem;
     
     .progress-bar {
-      border-radius: var(--bs-border-radius-pill);
+      border-radius: 1rem;
       transition: width 0.6s ease;
     }
   }
 
-  .btn {
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-2px);
+  .card-footer {
+    .btn-group {
+      .btn {
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
     }
+  }
+}
+
+// Empty state styling
+.text-center {
+  .fa-folder-open {
+    opacity: 0.5;
   }
 }
 
@@ -97,13 +116,5 @@
 }
 
 .col-12 {
-  animation: fadeIn 0.5s ease-out forwards;
-  animation-delay: calc(var(--animation-order) * 0.1s);
-  opacity: 0;
-  
-  @for $i from 1 through 10 {
-    &:nth-child(#{$i}) {
-      --animation-order: #{$i};
-    }
-  }
+  animation: fadeIn 0.5s ease-out;
 }

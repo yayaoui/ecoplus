@@ -11,6 +11,21 @@
   z-index: 1000;
   margin-top: auto;
   font-size: 0.875rem;
+
+  img {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+
+  .company-name {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #2c3e50;
+    
+    .plus-text {
+      color: #27ae60;
+      margin-left: 1px;
+    }
+  }
 }
 
 :host {
@@ -45,6 +60,16 @@
 
     &:hover {
       transform: translateY(-3px);
+    }
+  }
+}
+
+.social-links {
+  a {
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #27ae60 !important;
     }
   }
 }

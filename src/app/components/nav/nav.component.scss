@@ -6,11 +6,54 @@
 
 // Logo
 .navbar-brand {
-  img {
-    transition: transform 0.3s ease;
-    
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .logo-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #27ae60;
+    padding: 2px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
     &:hover {
       transform: scale(1.05);
+      box-shadow: 0 5px 12px rgba(39, 174, 96, 0.2);
+      border-color: #2ecc71;
+      
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    
+    .plus-text {
+      color: #27ae60;
+      margin-left: 2px;
+      font-weight: 900;
     }
   }
 }
@@ -66,6 +109,28 @@
   &:hover {
     background-color: var(--bs-primary-bg-subtle);
     transform: rotate(15deg);
+  }
+}
+
+// Mobile Toggle Button
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: transparent;
+  
+  &:focus {
+    box-shadow: none;
+    outline: 2px solid rgba(39, 174, 96, 0.2);
+  }
+
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &:hover {
+    background: rgba(39, 174, 96, 0.1);
   }
 }
 
