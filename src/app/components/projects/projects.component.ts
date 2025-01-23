@@ -7,11 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-  constructor(private router: Router) {}
+  expandedCards: { [key: number]: boolean } = {};
 
-  viewProjectDetails(projectId: number): void {
-    // Navigate to project details page
-    // this.router.navigate(['/projects', projectId]);
-    console.log('Viewing project details:', projectId);
+  toggleCard(cardId: number): void {
+    this.expandedCards[cardId] = !this.expandedCards[cardId];
+  }
+
+  isCardExpanded(cardId: number): boolean {
+    return this.expandedCards[cardId] || false;
   }
 }
