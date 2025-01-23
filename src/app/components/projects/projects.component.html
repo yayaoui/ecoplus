@@ -1,198 +1,227 @@
-<section class="py-5">
+<div class="projects-section py-5">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-4 text-success fw-bold mb-2">Nos Réalisations</h2>
-      <p class="lead">Découvrez nos projets de rénovation énergétique réussis</p>
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title display-4 mb-3">Nos Réalisations</h2>
+        <p class="section-subtitle lead text-muted">Découvrez nos projets de rénovation énergétique</p>
+      </div>
     </div>
-
+    
     <div class="row g-4">
       <!-- Solar Panel Project -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow-sm project-card">
-          <div id="carousel-1" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="../../../assets/projects/21.jpg" class="d-block w-100" alt="Installation Panneaux Solaires"
-                     style="height: 300px; object-fit: cover;">
-                <div class="carousel-caption">
-                  <span class="badge bg-success px-3 py-2">Réalisé</span>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <div id="carousel-1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-top">
+                <div class="carousel-item active">
+                  <img src="../../../assets/projects/21.jpg" class="d-block w-100" alt="Installation Panneaux Solaires"
+                       style="height: 300px; object-fit: cover;">
+                  <div class="carousel-caption">
+                    <span class="badge bg-success px-3 py-2">Réalisé</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../../../assets/projects/22.jpg" class="d-block w-100" alt="Résultat Final"
+                       style="height: 300px; object-fit: cover;">
                 </div>
               </div>
-              <div class="carousel-item">
-                <img src="../../../assets/projects/22.jpg" class="d-block w-100" alt="Résultat Final"
-                     style="height: 300px; object-fit: cover;">
-              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel-1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-1" data-bs-slide="next">
-              <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
 
-          <div class="card-body">
-            <h3 class="h4 mb-3">Isolation Intérieure</h3>
-            <div class="achievement-stats d-flex justify-content-between mb-3">
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">90%</h4>
-                <p class="small text-secondary mb-0">Isolation</p>
-              </div>
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">5</h4>
-                <p class="small text-secondary mb-0">Jours</p>
-              </div>
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">-30%</h4>
-                <p class="small text-secondary mb-0">Énergie</p>
+          <div class="project-content p-4">
+            <h3 class="project-title h4 mb-4">Isolation Intérieure</h3>
+            <div class="project-stats mb-4">
+              <div class="row text-center g-3">
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">90%</h4>
+                    <p class="small text-muted mb-0">Isolation</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">5</h4>
+                    <p class="small text-muted mb-0">Jours</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">-30%</h4>
+                    <p class="small text-muted mb-0">Énergie</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <p class="text-secondary">
-              <ng-container *ngIf="!isCardExpanded(1)">
-                {{ "Isolation intérieure de qualité supérieure. Découvrez l'une de nos réalisations : l'isolation intérieure d'une pièce pour garantir un confort thermique optimal et une excellente isolation acoustique." | slice:0:200 }}...
-                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(1)">Lire la suite</a>
-              </ng-container>
-              <ng-container *ngIf="isCardExpanded(1)">
-                Isolation intérieure de qualité supérieure. Découvrez l'une de nos réalisations : l'isolation intérieure d'une pièce pour garantir un confort thermique optimal et une excellente isolation acoustique. Nous utilisons des matériaux de haute performance, comme ici la laine de roche Rockwool, reconnue pour ses propriétés isolantes, durables et respectueuses de l'environnement. Nos experts s'assurent que chaque étape, du montage des structures métalliques à la pose des isolants, est réalisée avec rigueur et précision. Résultat : une solution durable, adaptée à vos besoins, et conforme aux normes les plus strictes. Vous souhaitez améliorer l'efficacité énergétique de votre logement tout en augmentant votre confort ? Contactez-nous pour un devis gratuit et personnalisé !
-                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(1)">Voir moins</a>
-              </ng-container>
-            </p>
-          </div>
-
-          <div class="card-footer border-0 bg-transparent">
+            <div class="project-description">
+              <p class="text-muted">
+                <ng-container *ngIf="!isCardExpanded(1)">
+                  {{ "Isolation intérieure de qualité supérieure. Découvrez l'une de nos réalisations : l'isolation intérieure d'une pièce pour garantir un confort thermique optimal et une excellente isolation acoustique." | slice:0:200 }}...
+                  <a href="javascript:void(0)" class="text-success text-decoration-none fw-bold" (click)="toggleCard(1)">Lire la suite</a>
+                </ng-container>
+                <ng-container *ngIf="isCardExpanded(1)">
+                  Isolation intérieure de qualité supérieure. Découvrez l'une de nos réalisations : l'isolation intérieure d'une pièce pour garantir un confort thermique optimal et une excellente isolation acoustique. Nous utilisons des matériaux de haute performance, comme ici la laine de roche Rockwool, reconnue pour ses propriétés isolantes, durables et respectueuses de l'environnement. Nos experts s'assurent que chaque étape, du montage des structures métalliques à la pose des isolants, est réalisée avec rigueur et précision. Résultat : une solution durable, adaptée à vos besoins, et conforme aux normes les plus strictes. Vous souhaitez améliorer l'efficacité énergétique de votre logement tout en augmentant votre confort ? Contactez-nous pour un devis gratuit et personnalisé !
+                  <a href="javascript:void(0)" class="text-success text-decoration-none fw-bold" (click)="toggleCard(1)">Voir moins</a>
+                </ng-container>
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- House Insulation Project -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow-sm project-card">
-          <div id="carousel-2" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="../../../assets/projects/11.jpg" class="d-block w-100" alt="Isolation Maison"
-                     style="height: 300px; object-fit: cover;">
-                <div class="carousel-caption">
-                  <span class="badge bg-success px-3 py-2">Réalisé</span>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <div id="carousel-2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-top">
+                <div class="carousel-item active">
+                  <img src="../../../assets/projects/11.jpg" class="d-block w-100" alt="Isolation Maison"
+                       style="height: 300px; object-fit: cover;">
+                  <div class="carousel-caption">
+                    <span class="badge bg-success px-3 py-2">Réalisé</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../../../assets/projects/12.jpg" class="d-block w-100" alt="Résultat Final"
+                       style="height: 300px; object-fit: cover;">
                 </div>
               </div>
-              <div class="carousel-item">
-                <img src="../../../assets/projects/12.jpg" class="d-block w-100" alt="Résultat Final"
-                     style="height: 300px; object-fit: cover;">
-              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel-2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-2" data-bs-slide="next">
-              <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
 
-          <div class="card-body">
-            <h3 class="h4 mb-3">Rénovation de Façade</h3>
-            <div class="achievement-stats d-flex justify-content-between mb-3">
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">100%</h4>
-                <p class="small text-secondary mb-0">Satisfaction</p>
-              </div>
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">15</h4>
-                <p class="small text-secondary mb-0">Jours</p>
-              </div>
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">-40%</h4>
-                <p class="small text-secondary mb-0">Énergie</p>
+          <div class="project-content p-4">
+            <h3 class="project-title h4 mb-4">Rénovation de Façade</h3>
+            <div class="project-stats mb-4">
+              <div class="row text-center g-3">
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">100%</h4>
+                    <p class="small text-muted mb-0">Satisfaction</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">15</h4>
+                    <p class="small text-muted mb-0">Jours</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">-40%</h4>
+                    <p class="small text-muted mb-0">Énergie</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <p class="text-secondary">
-              <ng-container *ngIf="!isCardExpanded(2)">
-                {{ "Une maison rénovée avec soin pour une allure moderne et intemporelle 🏠✨ Grâce à notre expertise, cette maison a bénéficié d'une rénovation complète de sa façade, avec une isolation extérieure performante" | slice:0:200 }}...
-                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(2)">Lire la suite</a>
-              </ng-container>
-              <ng-container *ngIf="isCardExpanded(2)">
-                Une maison rénovée avec soin pour une allure moderne et intemporelle 🏠✨
-                Grâce à notre expertise, cette maison a bénéficié d'une rénovation complète de sa façade, avec une isolation extérieure performante et des finitions impeccables. Nos équipes ont mis en œuvre des solutions innovantes pour garantir une efficacité énergétique optimale tout en sublimant l'esthétique du bâtiment.
-                🌿 Allier confort et durabilité : Notre approche vous permet de réduire vos dépenses énergétiques tout en valorisant votre patrimoine immobilier.
-                Faites confiance à notre savoir-faire pour vos projets de rénovation ou de construction. Ensemble, construisons un avenir plus durable et plus esthétique.
-                💪 #RénovationMaison #IsolationExtérieure #FaçadeParfaite #EfficacitéÉnergétique
-                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(2)">Voir moins</a>
-              </ng-container>
-            </p>
-          </div>
-
-          <div class="card-footer border-0 bg-transparent">
+            <div class="project-description">
+              <p class="text-muted">
+                <ng-container *ngIf="!isCardExpanded(2)">
+                  {{ "Une maison rénovée avec soin pour une allure moderne et intemporelle 🏠✨ Grâce à notre expertise, cette maison a bénéficié d'une rénovation complète de sa façade, avec une isolation extérieure performante" | slice:0:200 }}...
+                  <a href="javascript:void(0)" class="text-success text-decoration-none fw-bold" (click)="toggleCard(2)">Lire la suite</a>
+                </ng-container>
+                <ng-container *ngIf="isCardExpanded(2)">
+                  Une maison rénovée avec soin pour une allure moderne et intemporelle 🏠✨
+                  Grâce à notre expertise, cette maison a bénéficié d'une rénovation complète de sa façade, avec une isolation extérieure performante et des finitions impeccables. Nos équipes ont mis en œuvre des solutions innovantes pour garantir une efficacité énergétique optimale tout en sublimant l'esthétique du bâtiment.
+                  🌿 Allier confort et durabilité : Notre approche vous permet de réduire vos dépenses énergétiques tout en valorisant votre patrimoine immobilier.
+                  Faites confiance à notre savoir-faire pour vos projets de rénovation ou de construction. Ensemble, construisons un avenir plus durable et plus esthétique.
+                  💪 #RénovationMaison #IsolationExtérieure #FaçadeParfaite #EfficacitéÉnergétique
+                  <a href="javascript:void(0)" class="text-success text-decoration-none fw-bold" (click)="toggleCard(2)">Voir moins</a>
+                </ng-container>
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Heat Pump Installation -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow-sm project-card">
-          <div id="carousel-3" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="../../../assets/projects/1.jpg" class="d-block w-100" alt="Pompe à Chaleur"
-                     style="height: 300px; object-fit: cover;">
-                <div class="carousel-caption">
-                  <span class="badge bg-success px-3 py-2">Réalisé</span>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <div id="carousel-3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-top">
+                <div class="carousel-item active">
+                  <img src="../../../assets/projects/1.jpg" class="d-block w-100" alt="Pompe à Chaleur"
+                       style="height: 300px; object-fit: cover;">
+                  <div class="carousel-caption">
+                    <span class="badge bg-success px-3 py-2">Réalisé</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../../../assets/projects/2.jpg" class="d-block w-100" alt="Installation"
+                       style="height: 300px; object-fit: cover;">
                 </div>
               </div>
-              <div class="carousel-item">
-                <img src="../../../assets/projects/2.jpg" class="d-block w-100" alt="Installation"
-                     style="height: 300px; object-fit: cover;">
-              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel-3" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-3" data-bs-slide="next">
-              <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
 
-          <div class="card-body">
-            <h3 class="h4 mb-3">Installation Pompe à Chaleur</h3>
-            <div class="achievement-stats d-flex justify-content-between mb-3">
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">50%</h4>
-                <p class="small text-secondary mb-0">Économies</p>
-              </div>
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">12kW</h4>
-                <p class="small text-secondary mb-0">Puissance</p>
-              </div>
-              <div class="text-center">
-                <h4 class="h2 text-success mb-1">10</h4>
-                <p class="small text-secondary mb-0">Jours</p>
+          <div class="project-content p-4">
+            <h3 class="project-title h4 mb-4">Installation Pompe à Chaleur</h3>
+            <div class="project-stats mb-4">
+              <div class="row text-center g-3">
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">50%</h4>
+                    <p class="small text-muted mb-0">Économies</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">12kW</h4>
+                    <p class="small text-muted mb-0">Puissance</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h4 class="h2 text-success mb-1">10</h4>
+                    <p class="small text-muted mb-0">Jours</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <p class="text-secondary">
-              <ng-container *ngIf="!isCardExpanded(3)">
-                {{ "Optimisez votre confort avec nos solutions de rénovation de pompes à chaleur. Spécialiste en rénovation de systèmes de chauffage, nous transformons vos espaces en véritables cocons d'efficacité énergétique." | slice:0:200 }}...
-                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(3)">Lire la suite</a>
-              </ng-container>
-              <ng-container *ngIf="isCardExpanded(3)">
-                Optimisez votre confort avec nos solutions de rénovation de pompes à chaleur.
-                Spécialiste en rénovation de systèmes de chauffage, nous transformons vos espaces en véritables cocons d'efficacité énergétique. Grâce à nos services, nous modernisons et optimisons vos installations de pompes à chaleur pour vous offrir un confort thermique durable, tout en réduisant votre consommation énergétique.
-                Chaque projet est unique : nous analysons vos besoins et mettons en œuvre des solutions sur mesure, comme le démontre notre travail sur des installations complexes et performantes (comme celle visible ici), intégrant des ballons thermodynamiques et des circuits de chauffage optimisés.
-                Avec notre expertise, vous bénéficiez d'un chauffage fiable, respectueux de l'environnement et à la pointe de la technologie. Faites le choix de l'excellence et confiez-nous la rénovation de votre pompe à chaleur dès aujourd'hui.
-                Contactez-nous pour un devis personnalisé et une intervention rapide.
-                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(3)">Voir moins</a>
-              </ng-container>
-            </p>
-          </div>
-
-          <div class="card-footer border-0 bg-transparent">
+            <div class="project-description">
+              <p class="text-muted">
+                <ng-container *ngIf="!isCardExpanded(3)">
+                  {{ "Optimisez votre confort avec nos solutions de rénovation de pompes à chaleur. Spécialiste en rénovation de systèmes de chauffage, nous transformons vos espaces en véritables cocons d'efficacité énergétique." | slice:0:200 }}...
+                  <a href="javascript:void(0)" class="text-success text-decoration-none fw-bold" (click)="toggleCard(3)">Lire la suite</a>
+                </ng-container>
+                <ng-container *ngIf="isCardExpanded(3)">
+                  Optimisez votre confort avec nos solutions de rénovation de pompes à chaleur.
+                  Spécialiste en rénovation de systèmes de chauffage, nous transformons vos espaces en véritables cocons d'efficacité énergétique. Grâce à nos services, nous modernisons et optimisons vos installations de pompes à chaleur pour vous offrir un confort thermique durable, tout en réduisant votre consommation énergétique.
+                  Chaque projet est unique : nous analysons vos besoins et mettons en œuvre des solutions sur mesure, comme le démontre notre travail sur des installations complexes et performantes (comme celle visible ici), intégrant des ballons thermodynamiques et des circuits de chauffage optimisés.
+                  Avec notre expertise, vous bénéficiez d'un chauffage fiable, respectueux de l'environnement et à la pointe de la technologie. Faites le choix de l'excellence et confiez-nous la rénovation de votre pompe à chaleur dès aujourd'hui.
+                  Contactez-nous pour un devis personnalisé et une intervention rapide.
+                  <a href="javascript:void(0)" class="text-success text-decoration-none fw-bold" (click)="toggleCard(3)">Voir moins</a>
+                </ng-container>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>

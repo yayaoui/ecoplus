@@ -84,6 +84,113 @@
   }
 }
 
+.projects-section {
+
+  .section-title {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--bs-success);
+      border-radius: 2px;
+    }
+  }
+
+  .project-card {
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(var(--bs-dark-rgb), 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(var(--bs-dark-rgb), 0.1);
+    }
+
+    .project-image {
+      position: relative;
+      
+      .carousel-inner {
+        border-radius: 12px 12px 0 0;
+      }
+
+      .carousel-caption {
+        bottom: 20px;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        background: rgba(var(--bs-dark-rgb), 0.5);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 15px;
+
+        &-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .project-content {
+      .project-title {
+        font-weight: 600;
+      }
+
+      .project-stats {
+        .stat-item {
+          border: 0.5px solid var(--bs-border-color);
+          padding: 15px 10px;
+          border-radius: 8px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background: var(--bs-gradient);
+            color: white;
+          }
+
+          h4 {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .project-description {
+        line-height: 1.6;
+        
+        a {
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: var(--bs-success) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .projects-section {
+    .project-card {
+      margin-bottom: 30px;
+    }
+  }
+}
+
 // Animations
 @keyframes fadeIn {
   from {
