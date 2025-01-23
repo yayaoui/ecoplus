@@ -12,14 +12,14 @@
           <div id="carousel-1" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../../../assets/projects/31.jpg" class="d-block w-100" alt="Installation Panneaux Solaires"
+                <img src="../../../assets/projects/21.jpg" class="d-block w-100" alt="Installation Panneaux Solaires"
                      style="height: 300px; object-fit: cover;">
                 <div class="carousel-caption">
                   <span class="badge bg-success px-3 py-2">Réalisé</span>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="../../../assets/projects/33.jpg" class="d-block w-100" alt="Résultat Final"
+                <img src="../../../assets/projects/22.jpg" class="d-block w-100" alt="Résultat Final"
                      style="height: 300px; object-fit: cover;">
               </div>
             </div>
@@ -34,22 +34,31 @@
           </div>
 
           <div class="card-body">
-            <h3 class="h4 mb-3">Installation Panneaux Solaires</h3>
+            <h3 class="h4 mb-3">Isolation Intérieure</h3>
             <div class="achievement-stats d-flex justify-content-between mb-3">
               <div class="text-center">
-                <h4 class="h2 text-success mb-1">60%</h4>
-                <p class="small text-secondary mb-0">Économie d'énergie</p>
+                <h4 class="h2 text-success mb-1">90%</h4>
+                <p class="small text-secondary mb-0">Isolation</p>
               </div>
               <div class="text-center">
-                <h4 class="h2 text-success mb-1">25kW</h4>
-                <p class="small text-secondary mb-0">Puissance</p>
+                <h4 class="h2 text-success mb-1">5</h4>
+                <p class="small text-secondary mb-0">Jours</p>
               </div>
               <div class="text-center">
-                <h4 class="h2 text-success mb-1">2</h4>
-                <p class="small text-secondary mb-0">Semaines</p>
+                <h4 class="h2 text-success mb-1">-30%</h4>
+                <p class="small text-secondary mb-0">Énergie</p>
               </div>
             </div>
-            <p class="text-secondary">Installation complète d'un système solaire pour un complexe résidentiel, permettant une réduction significative des coûts énergétiques.</p>
+            <p class="text-secondary">
+              <ng-container *ngIf="!isCardExpanded(1)">
+                {{ "Isolation intérieure de qualité supérieure. Découvrez l'une de nos réalisations : l'isolation intérieure d'une pièce pour garantir un confort thermique optimal et une excellente isolation acoustique." | slice:0:200 }}...
+                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(1)">Lire la suite</a>
+              </ng-container>
+              <ng-container *ngIf="isCardExpanded(1)">
+                Isolation intérieure de qualité supérieure. Découvrez l'une de nos réalisations : l'isolation intérieure d'une pièce pour garantir un confort thermique optimal et une excellente isolation acoustique. Nous utilisons des matériaux de haute performance, comme ici la laine de roche Rockwool, reconnue pour ses propriétés isolantes, durables et respectueuses de l'environnement. Nos experts s'assurent que chaque étape, du montage des structures métalliques à la pose des isolants, est réalisée avec rigueur et précision. Résultat : une solution durable, adaptée à vos besoins, et conforme aux normes les plus strictes. Vous souhaitez améliorer l'efficacité énergétique de votre logement tout en augmentant votre confort ? Contactez-nous pour un devis gratuit et personnalisé !
+                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(1)">Voir moins</a>
+              </ng-container>
+            </p>
           </div>
 
           <div class="card-footer border-0 bg-transparent">
@@ -63,14 +72,14 @@
           <div id="carousel-2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../../../assets/projects/34.jpg" class="d-block w-100" alt="Isolation Maison"
+                <img src="../../../assets/projects/11.jpg" class="d-block w-100" alt="Isolation Maison"
                      style="height: 300px; object-fit: cover;">
                 <div class="carousel-caption">
                   <span class="badge bg-success px-3 py-2">Réalisé</span>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="../../../assets/projects/35.jpg" class="d-block w-100" alt="Résultat Final"
+                <img src="../../../assets/projects/12.jpg" class="d-block w-100" alt="Résultat Final"
                      style="height: 300px; object-fit: cover;">
               </div>
             </div>
@@ -85,22 +94,35 @@
           </div>
 
           <div class="card-body">
-            <h3 class="h4 mb-3">Isolation Maison Historique</h3>
+            <h3 class="h4 mb-3">Rénovation de Façade</h3>
             <div class="achievement-stats d-flex justify-content-between mb-3">
               <div class="text-center">
-                <h4 class="h2 text-success mb-1">40%</h4>
-                <p class="small text-secondary mb-0">Gain d'efficacité</p>
+                <h4 class="h2 text-success mb-1">100%</h4>
+                <p class="small text-secondary mb-0">Satisfaction</p>
               </div>
               <div class="text-center">
-                <h4 class="h2 text-success mb-1">1</h4>
-                <p class="small text-secondary mb-0">Semaine</p>
+                <h4 class="h2 text-success mb-1">15</h4>
+                <p class="small text-secondary mb-0">Jours</p>
               </div>
               <div class="text-center">
-                <h4 class="h2 text-success mb-1">A+</h4>
-                <p class="small text-secondary mb-0">Performance</p>
+                <h4 class="h2 text-success mb-1">-40%</h4>
+                <p class="small text-secondary mb-0">Énergie</p>
               </div>
             </div>
-            <p class="text-secondary">Amélioration complète de l'isolation d'un bâtiment historique tout en préservant son caractère architectural unique.</p>
+            <p class="text-secondary">
+              <ng-container *ngIf="!isCardExpanded(2)">
+                {{ "Une maison rénovée avec soin pour une allure moderne et intemporelle 🏠✨ Grâce à notre expertise, cette maison a bénéficié d'une rénovation complète de sa façade, avec une isolation extérieure performante" | slice:0:200 }}...
+                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(2)">Lire la suite</a>
+              </ng-container>
+              <ng-container *ngIf="isCardExpanded(2)">
+                Une maison rénovée avec soin pour une allure moderne et intemporelle 🏠✨
+                Grâce à notre expertise, cette maison a bénéficié d'une rénovation complète de sa façade, avec une isolation extérieure performante et des finitions impeccables. Nos équipes ont mis en œuvre des solutions innovantes pour garantir une efficacité énergétique optimale tout en sublimant l'esthétique du bâtiment.
+                🌿 Allier confort et durabilité : Notre approche vous permet de réduire vos dépenses énergétiques tout en valorisant votre patrimoine immobilier.
+                Faites confiance à notre savoir-faire pour vos projets de rénovation ou de construction. Ensemble, construisons un avenir plus durable et plus esthétique.
+                💪 #RénovationMaison #IsolationExtérieure #FaçadeParfaite #EfficacitéÉnergétique
+                <a href="javascript:void(0)" class="text-danger" (click)="toggleCard(2)">Voir moins</a>
+              </ng-container>
+            </p>
           </div>
 
           <div class="card-footer border-0 bg-transparent">
