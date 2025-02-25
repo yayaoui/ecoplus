@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       name: 'Christophe Simler',
       date: 'Il y a 2 mois',
-      text: 'Un conseiller toujours très agréable et très professionnel, je recommande.',
+      text: 'Les travaux se sont super bien passés, j’ai pu rénover toute ma maison grâce aux aides de l’État. L’équipe a été très professionnelle, rapide et à l’écoute de mes besoins. ',
       rating: 5
     },
     {
