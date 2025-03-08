@@ -33,7 +33,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
+              "src/logo.png",
               "src/assets"
             ],
             "styles": [
@@ -58,7 +58,8 @@
                             "maximumWarning": "8kb",
                             "maximumError": "10kb"
                           }
-                        ],
+                        ]
+,
               "outputHashing": "all"
             },
             "development": {
